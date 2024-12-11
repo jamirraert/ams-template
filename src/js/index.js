@@ -29,8 +29,24 @@ profileBtn.addEventListener('click', toggleProfile);
 
 // SMALL SCREEN
 function toggleNavbar() {
-    navbar.classList.toggle('hidden')
-    profile.classList.toggle('hidden')
+
+    navbar.classList.toggle('p-2')
+    navbar.classList.toggle('max-h-0');
+    navbar.classList.toggle('max-h-screen');  // Or any value like max-h-64, max-h-96, etc.
+
+    profile.firstElementChild.classList.toggle('p-3')
+    profile.classList.toggle('max-h-0');
+    profile.classList.toggle('max-h-screen');  // Same as navbar max-height
+
+    // Optionally toggle the hamburger icon between 'open' and 'close'
+    const icon = hamburger.querySelector('i');
+    if (icon.classList.contains('fa-bars')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+    } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+    }
 }
 
 // LARGE SCREEN
