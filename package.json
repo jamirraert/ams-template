@@ -1,0 +1,16 @@
+{
+  "name": "ams-ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/app.css ./src/css/main.css",
+    "watch": "npx tailwindcss -i ./src/app.css -o ./src/css/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.16"
+  }
+}

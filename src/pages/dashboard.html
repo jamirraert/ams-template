@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/fa/css/all.css">
+</head>
+<body>
+    <!-- MOBILE -->
+    <header class="md:hidden border-b border-blue-700">
+        <div class="flex bg-blue-500 p-4">
+            <div>
+                <a href="#">LOGO</a>
+            </div>
+            <div class="ml-auto text-white" id="hamburger-sm">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <nav class="bg-blue-300" id="navbar-sm">
+            <ul>
+                <li class="hover:cursor-pointer hover:ease-in-out p-3 hover:text-gray-200 text-white hover:border-gray-200">
+                    <i class="fa-solid fa-gauge"></i>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li class="hover:cursor-pointer hover:ease-in-out p-3 hover:text-gray-200 text-white hover:border-gray-200">
+                    <i class="fa-solid fa-person"></i>
+                    <a href="#">Athlete</a>
+                </li>
+                <li class="hover:cursor-pointer hover:ease-in-out p-3 hover:text-gray-200 text-white hover:border-gray-200">
+                    <i class="fa-solid fa-group-arrows-rotate"></i>
+                    <a href="#">Team Management</a>
+                </li>
+                <li class="hover:cursor-pointer hover:ease-in-out p-3 hover:text-gray-200 text-white hover:border-gray-200">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <a href="#">Match Scheduling</a>
+                </li>
+                <li class="hover:cursor-pointer hover:ease-in-out p-3 hover:text-gray-200 text-white hover:border-gray-200">
+                    <i class="fa-solid fa-bug"></i>
+                    <a href="#">Reports & Insights</a>
+                </li>
+                <li class="hover:cursor-pointer hover:ease-in-out p-3 hover:text-gray-200 text-white hover:border-gray-200">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <a href="#">Scouting & Recruitment</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="bg-blue-300 p-3 text-white" id="profile-sm">
+            <ul>
+                <li class="mb-3">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <a href="#">Profile</a>
+                </li>
+                <li class="mb-3">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <a href="#">Sign out</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- BIG SCREEN -->
+    <header class="hidden md:block bg-blue-500 p-4 border-b border-blue-500">
+        <div class="flex">
+            <div>
+                <a href="">LOGO</a>
+            </div>
+            <div class="ml-auto relative">
+                <div class="flex-wrap-reverse items-center space-x-7"> <!-- Add flex for inline and space-between the items -->
+                    <i class="fa-solid fa-circle-user text-white"></i>
+                    <span></span>
+                </div>
+                <ul class="bg-customWhite p-2 rounded-md absolute left-[-50px] w-auto mt-3 shadow-md">
+                    <li class="mb-2">
+                        <a href="#" class="">
+                            <i class="fa-solid fa-circle-user box"></i>
+                            Profile
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="md:flex">
+        <aside class="hidden md:block h-screen bg-gray-600 w-1/2 p-1" id="aside">
+            <ul class="flex flex-wrap p-2 font-bold text-white mb-3 border-b border-gray-500" id="aside-dashboard">
+                <li>
+                    <a href="#">
+                        Dashboard
+                    </a>
+                </li>
+                <li class="ml-auto">
+                    <button id="hamburger-md" class="transform hover:scale-110">
+                        <i class="fa-solid fa-circle-left"></i>
+                    </button>
+                </li>
+            </ul>
+            <nav id="navbar-full">
+                <ul>
+                    <li class="hover:cursor-pointer hover:ease-in-out p-3 hover:text-gray-200 text-white hover:border-gray-200" id="menus">
+                        <i class="fa-solid fa-gauge"></i>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li class="hover:cursor-pointer hover:ease-in-out p-3 hover:text-gray-200 text-white hover:border-gray-200" id="menus">
+                        <i class="fa-solid fa-person"></i>
+                        <a href="#">Athlete</a>
+                    </li>
+                    <li class="hover:cursor-pointer hover:ease-in-out p-3 hover:text-gray-200 text-white hover:border-gray-200" id="menus">
+                        <i class="fa-solid fa-group-arrows-rotate"></i>
+                        <a href="#">Team Management</a>
+                    </li>
+                    <li class="hover:cursor-pointer hover:ease-in-out p-3 hover:text-gray-200 text-white hover:border-gray-200" id="menus">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <a href="#">Match Scheduling</a>
+                    </li>
+                    <li class="hover:cursor-pointer hover:ease-in-out p-3 hover:text-gray-200 text-white hover:border-gray-200" id="menus">
+                        <i class="fa-solid fa-bug"></i>
+                        <a href="#">Reports & Insights</a>
+                    </li>
+                    <li class="hover:cursor-pointer hover:ease-in-out p-3 hover:text-gray-200 text-white hover:border-gray-200" id="menus">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        <a href="#">Scouting & Recruitment</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="w-full p-1">
+            <h1>Main</h1>
+        </main>
+    </div>
+
+    <script src="../js/index.js"></script>
+    
+</body>
+</html>
