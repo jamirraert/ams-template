@@ -12,13 +12,16 @@ let hamburgerMD = document.getElementById('hamburger-md'),
     navbarMD = document.getElementById('navbar-full'),
     asideDashBoard = document.getElementById('aside-dashboard'),
     aside = document.getElementById('aside'),
-    menus = document.querySelectorAll('#menus')
+    menus = document.querySelectorAll('#menus'),
+    profileMD = document.getElementById('profile'),
+    profileBtn = document.getElementById('profile-button')
 
 /**
  * @ADD_EVENT
  */
 hamburger.addEventListener('click', toggleNavbar);
 hamburgerMD.addEventListener('click', toggleNavbarMD);
+profileBtn.addEventListener('click', toggleProfile);
 
 /**
  * @CONTROLLER
@@ -38,7 +41,8 @@ function toggleNavbarMD() {
     asideDashBoard.classList.toggle('border-b')
     
     // ASIDE
-    aside.classList.toggle('!w-auto')
+    aside.classList.toggle('w-1/2'); // Toggle between 50% width and 0 width
+    aside.classList.toggle('w-[6%]');
 
     // BUTTON
     var icon = hamburgerMD.firstElementChild;    
@@ -53,10 +57,26 @@ function toggleNavbarMD() {
 
     // NAVBAR
     menus.forEach(element => {
-        let links = element.children[1];
-        links.classList.toggle('hidden')
+        let links = element.children[1]
+        if(!links.classList.contains('hidden')) {
+            links.classList.add('hidden')
+        } else {
+            setTimeout(function() {
+                links.classList.remove('hidden')
+            }, 150)
+        }
     });
-
-    
 }
+
+function toggleProfile() {
+    if (profileMD.classList.contains('opacity-0')) {
+        profileMD.classList.remove('opacity-0', 'invisible');
+        profileMD.classList.add('opacity-100');
+    } else {
+        profileMD.classList.remove('opacity-100');
+        profileMD.classList.add('opacity-0', 'invisible');
+    }
+}
+
+
 
